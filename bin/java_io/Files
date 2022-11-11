@@ -1,0 +1,43 @@
+Files: source/ destination of data in Java applications.
+=====
+Java IO API Classes:
+====================
+File
+RandomAccessFile
+File InputStream 
+File OutputStream
+FileReader
+FileWriter
+
+Reading from a file from one end to another end:
+================================================
+use: FileInputStream (Read a file as binary data) or FileReader (Read a file as textual data)
+how: These two classes lets you read a file one byte or character at a time from the start to the end of the file, 
+or read the bytes into an array of byte or char, again from start towards the end of the file. 
+Don't have to read the whole file, but you can only read bytes and chars in the sequence they are stored in the file.
+
+RandomAccessFile:If you need to jump around the file and read only parts of it from here and there
+=================
+
+Writing a file from one end to another end: 
+===========================================
+use: FileOutputStream or a FileWriter 
+how: can write a byte or character at a time from the beginning to the end of the file, or write arrays of byte and char.
+Data is stored sequentially in the file in the order they are written.
+
+RandomAccessFile:
+================
+Means that you can skip around the file and 
+read from or write to it at the same time in any way you want. 
+This is what is meant by "random" - that the next byte read is not determined by the previous byte read. 
+No particular access sequence is enforced. 
+You can access the bytes in the file "at random" - arbitrarily. 
+This makes it possible to overwrite parts of an existing file, to append to it, delete from it, and of course read from 
+the file from wherever you need to read from it.
+
+File:
+=====
+Sometimes you may need access to information about a file rather than its content. 
+For instance, if you need to know the file size or the file attributes of a file.
+The same may be true for a directory. For instance, you may want to get a list of all files in a given directory. 
+Both file and directory information is available via the File class.

@@ -1,0 +1,21 @@
+List Interface: 
+is an ordered collection 
+that allows us to store and access elements sequentially
+extends the collection interface
+
+Since it is an interface we cannot create objects.
+To use its functionality, we can use these classes:
+1. ArrayList
+2. LinkedList
+3. Vector
+4. Stack
+
+How to use List:
+import java.util.List;
+List<String> list1 = new ArrayList<>();
+List<Integer> list2 = new LinkedList<>();
+
+Common Methods:
+add(),addAll(),remove(),removeAll(),clear(), get(),set(),size(),
+toArray(),iterator(),contains()
+

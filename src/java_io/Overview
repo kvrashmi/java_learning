@@ -1,0 +1,75 @@
+Package: java.io.*;
+
+Java's IO package deals with the reading of raw data from a source and writing of raw data to a destination. 
+The most typical sources and destinations of data are these:
+1.Files
+2.Pipes
+3.Network Connections
+4.In-memory Buffers (e.g. arrays)
+5.System.in, System.out, System.error
+
+	  Java app/pgm reads 		Java app/pgm writes
+	  data from a source        processed data to a source		 
+Source------------------>Program------------------------->Destination
+					   Processes the 
+					   data  read
+
+
+***********									  ****************
+*		  *===================================*				 *
+* Source  *              Stream				  * Destination  *
+*         *===================================*				 *
+***********			Data flows in the stream  ****************
+
+
+What is a stream? 
+	* endless flow of data
+	* read from a stream or write to a stream
+	* connected to a data source or a data destination
+	* two types:
+	  byte-based: reading or writing bytes
+	  character-based: reading or writing characters
+	  
+InputStream-OutputStream - Reader-Writer:
+A program that needs to read data from some source needs an InputStream or a Reader.
+A program that needs to write data to some destination needs an OutputStream or a Writer.
+
+**********		  ******************		 *************
+*		 *		  * Input Stream/  *		 *           *
+* Source *=======>* Reader		   *========>*Destination*
+*		 *		  *				   *         *			 *
+**********        ******************         *************
+
+**********		  ******************		 *************
+*		 *		  * Output Stream/ *		 *           *
+* Source *=======>* Writer		   *========>*Destination*
+*		 *		  *				   *         *			 *
+**********        ******************         *************
+
+An InputStream or Reader is linked to a source of data. 
+An OutputStream or Writer is linked to a destination of data.
+
+IO Purposes:
+===========
+File Access
+Network Access
+Internal Memory Buffer Access
+Inter-Thread Communication (Pipes)
+Buffering
+Filtering
+Parsing
+Reading and Writing Text (Readers / Writers)
+Reading and Writing Primitive Data (long, int etc.)
+Reading and Writing Objects
+
+
+
+
+
+
+
+
+
+
+
+

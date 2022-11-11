@@ -1,0 +1,35 @@
+Singleton Class:
+===============
+In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time. 
+After the first time, if we try to instantiate the Singleton class, the new variable also points to the first instance created. 
+So whatever modifications we do to any variable inside the class through any instance, 
+affects the variable of the single instance created and is visible if we access that variable through any variable of that class type defined. 
+
+Remember the key points while defining class as a singleton class that is while designing a singleton class: 
+Make a constructor private.
+Write a static method that has the return type object of this singleton class. 
+Here, the concept of Lazy initialization is used to write this static method.
+
+How to Design/Create a Singleton Class in Java?
+===============================================
+To create a singleton class, we must follow the steps, given below:
+1. Ensure that only one instance of the class exists.
+2. Provide global access to that instance by
+Declaring all constructors of the class to be private.
+Providing a static method that returns a reference to the instance. 
+The lazy initialization concept is used to write the static methods.
+The instance is stored as a private static variable.
+
+Difference between Normal Class and Singleton Class:
+====================================================
+We can distinguish a Singleton class from the usual classes with respect to the process of instantiating the object of the class.
+To instantiate a normal class, we use a java constructor. On the other hand, to instantiate a singleton class, we use the getInstance() method.
+The other difference is that a normal class vanishes at the end of the life cycle of the application while the singleton class does not 
+destroy with the completion of an application.
+
+Forms of Singleton Class Pattern
+================================
+There are two forms of singleton design pattern, which are:
+
+Early Instantiation: The object creation takes place at the load time.
+Lazy Instantiation: The object creation is done according to the requirement.

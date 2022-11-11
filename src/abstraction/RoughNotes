@@ -1,0 +1,42 @@
+RuleNo1: We cannot create object or instantiate an abstract class
+1. Have an abstract class
+2. Have a derived class - derived class should extend the abstract class
+3. Main method is in derived class
+4. Try to create an object of the abstract class - it wont work.
+RuleNo5: We cannot create object or instantiate an abstract class
+1. Have an abstract class
+2. Main method is inside this abstract class itself
+3. Try to create an object of this abstract class - it wont work.
+
+
+UI (Tier1)          ====> API (Tier2)       ====> Database (Tier3) 
+Html,CSS,Javascript       JAVA,PHP,PYTHON         All the actual data 
+	(Ajax) 			=>	 Create object and        (Relation db: table - rows and col: 
+get,post,put,delete		  call the method
+
+
+
+Different types of methods we can have in abstract class:
+1. We can have abstract method
+2. We can have non-abstract method
+3. We can have final methods
+4. We can also have static methods.
+
+
+1. You downloaded my code from master branch
+2. You create a new branch - git branch -m "branchname"
+3. Check out that branch  - git checkout branchname
+4. Write the code
+5. Push the code (from local branch - to your remote branch)
+6. give me a pull request (go to git hub - open rashmi's account - there you should privide the pull request)
+7. (Duncan's) branchhame =>(rashmi's) master
+8. Rashmi verify and merge it
+9. Duncan do - git pull 
+ 
+
+
+
+
+
+
+

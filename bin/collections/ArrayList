@@ -1,0 +1,17 @@
+ArrayList: 
+class to implement functionality of resizable-arrays.
+Implements list interface of collections framework.
+
+ArrayList vs Array:
+Array : Declare the size first and then use it. 
+Once size is declared it cannot be changed.
+ArrayList: Allows us to create resizable arrays. 
+Automatically adjust size when we add or remove elements from them. 
+Hence, arraylists are known as dynamic arrays.
+
+How to create an arraylist:
+import java.util.ArrayList;
+ArrayList<String> al1 = new ArrayList<>();
+ArrayList<Integer> al2 = new ArrayList<>();
+List<Double> al3 = new ArrayList<>();
+List<ClassType> al4 = new ArrayList<>();

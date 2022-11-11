@@ -1,0 +1,11 @@
+1.Write a program to print a string entered by user.
+2.Write a program to input and display the sentence I love candies.
+3.Write a program to find the length of the string "refrigerator".
+4.Write a program to check if the letter 'e' is present in the word 'Umbrella'.
+5.Write a program to check if the word 'orange' is present in the "This is orange juice".
+6.Write a program to find the first and the last occurence of the letter 'o' and character ',' in "Hello, World".
+7.Write a program that takes your full name as input and displays the abbreviations of the first and middle names except the last name which is displayed as it is. For example, if your name is Robert Brett Roser, then the output should be R.B.Roser.
+8.Write a program to find the number of vowels, consonents, digits and white space characters in a string.
+9.Write a program to delete all consonents from the string "Hello, have a good day".
+10.Input a string of alphabets. Find out the number of occurrence of all alphabets in that string. 
+Find out the alphabet with maximum occurrence.

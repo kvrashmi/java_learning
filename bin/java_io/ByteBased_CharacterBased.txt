@@ -1,0 +1,27 @@
+Byte Stream								|			Character Stream
+=============================================================================================
+1.helps to perform input and output		|1.helps to perform input and output 
+operations of 8-bit bytes...			|operations of 16-bit Unicode...
+2.Process data byte by byte				|2.Process data char by char.
+3.Abstract Class: InputStream/Output    |3.Abstract Class: Reader/Writer
+Stream.									|
+4.Used to read or write binary data     |4.Used to read/write character
+5.Used to process raw data like binary	|5.Used to process text files.
+files									|
+
+Benefits of Byte Stream:
+========================
+1.Byte stream provides a convenient way to handle the input and output of bytes.
+2.If your file is too large, byte stream handles data in chunks rather than having the entire data altogether in the memory.
+3.They are useful when we want to read/write binary data.
+
+Benefits of Character Stream:
+=============================
+1.Character stream provides convenient means to handle character-based inputs and outputs.
+2.Since they use Unicode, Character streams can be internationalized. Internationalization is the process of preparing an application 
+that supports linguistic, regional, cultural or political-specific data.
+3.In some cases, character streams are more efficient than byte streams especially when the file contains characters.
+4.Character streams automatically translate the internal format of the file (the content of the file) to and from the local character 
+set without extra effort by the programmer.
+5.In short, character streams make it easy to write programs that are not dependent upon a specific character encoding, 
+which becomes easy to internationalize.

@@ -1,0 +1,42 @@
+Methods:
+How are parameters passed on Java:
+==================================
+Parameters are passed by value.
+
+Parameter Passing Techniques:
+============================
+There are different ways in which parameter data can be passed into and out of methods and functions. 
+Let us assume that a function B() is called from another function A(). 
+In this case A is called the “caller function” and B is called the “called function or callee function”. 
+
+Actual Arguments Vs Formal Arguments:
+=====================================
+the arguments which A sends to B are called actual arguments and the parameters of B are called formal arguments.
+
+Formal Parameter: A variable and its type as they appear in the prototype of the function or method. 
+================
+Syntax: during function definition
+function_name(datatype variable_name)
+
+Actual Parameter: The variable or expression corresponding to a formal parameter that appears in the function or method call in the calling environment. 
+================
+Syntax: during function call
+func_name(variable name(s)); 
+
+Java is strictly Pass By Value:
+===============================
+Java creates a copy of references and pass it to method, but they still point to same memory reference.
+Changes are reflected back if we do not assign reference to a new location or object: 
+If we do not change the reference to refer some other object (or memory location), we can make changes to the members and these changes are reflected back. 
+
+What happens during pass by reference is made?
+==============================================
+when we pass a reference, a new reference variable to the same object is created. So we can only change members of the object whose reference is passed.
+We cannot change the reference to refer to some other object as the received reference is a copy of the original reference. 
+
+Memory Allocation for Methods Calls:
+===================================
+Methods calls are implemented through a stack. 
+Whenever a method is called a stack frame is created within the stack area and after that, the arguments passed to and the local variables and value to be returned 
+by this called method are stored in this stack frame and when execution of the called method is finished, the allocated stack frame would be deleted. 
+There is a stack pointer register that tracks the top of the stack which is adjusted accordingly.

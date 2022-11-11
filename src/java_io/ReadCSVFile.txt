@@ -1,0 +1,5 @@
+Method1: Scanner Class
+The Scanner class provides a constructor that produces values scanned from the specified file. 
+It breaks data into the token form. 
+It uses a delimiter pattern which by default matches white space. 
+The resulting tokens then converted into values of different types using the next() methods.

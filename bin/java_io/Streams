@@ -1,0 +1,35 @@
+1.Java IO streams are flows of data you can either read from, or write to.
+2.Streams are typically connected to a data source, or data destination, like a file or network connection.
+3.A stream has no concept of an index of the read or written data, like an array does. 
+4.Nor can you typically move forth and back in a stream, like you can in an array, or in a file using RandomAccessFile.
+5.A stream is just a continuous flow of data.
+6.Some stream implementations like the PushbackInputStream allows you to push data back into the stream, 
+to be re-read again later. 
+7.But you can only push back a limited amount of data, and you cannot traverse the data at will, like you can with an array.
+8.Data can only be accessed sequentially.
+9.Java IO streams are typically either byte based or character based.
+10.The streams that are byte based are typically called something with "stream", like InputStream or OutputStream. 
+11.These streams read and write a raw byte at a time, with the exception of the DataInputStream and DataOutputStream which 
+can also read and write int, long, float and double values.
+12.The streams that are character based are typically called something with "Reader" or "Writer".
+13.The character based streams can read / write characters (like Latin1 or UNICODE characters). 
+
+InputStream:
+============
+The class java.io.InputStream is the base class for all Java IO input streams. 
+If you are writing a component that needs to read input from a stream, try to make our component depend on an InputStream,
+rather than any of it's subclasses (e.g. FileInputStream). 
+Doing so makes your code able to work with all types of input streams, instead of only the concrete subclass.
+
+PushbackInputStream:
+====================
+Depending on InputStream only isn't always possible, though. 
+If you need to be able to push back data into the stream, 
+you will have to depend on a PushbackInputStream - meaning your stream variable will be of this type. 
+Otherwise your code will not be able to call the unread() method on the PushbackInputStream.
+
+read():
+You typically read data from an InputStream by calling the read() method. 
+The read() method returns a int containing the byte value of the byte read. 
+If there is no more data to be read, the read() method typically returns -1;
+

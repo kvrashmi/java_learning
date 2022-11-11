@@ -1,0 +1,22 @@
+Continue:
+=========
+When a continue statement is encountered the control directly jumps to the beginning of the loop for the next iteration instead of 
+executing the statements of the current iteration. The continue statement is used when we want to skip a particular condition and 
+continue the rest execution. Java continue statement is used for all type of loops but it is generally used in for, while, and do-while loops.
+In the case of for loop, the continue keyword force control to jump immediately to the update statement.
+Whereas in the case of a while loop or do-while loop, control immediately jumps to the Boolean expression.
+
+Break:
+======
+Break Statement is a loop control statement that is used to terminate the loop. 
+As soon as the break statement is encountered from within a loop, the loop iterations stop there, and control returns from the loop 
+immediately to the first statement after the loop. 
+Basically, break statements are used in situations when we are not sure about the actual number of iterations for the loop 
+or we want to terminate the loop based on some condition.  
+Break: In Java, the break is majorly used for: 
+==============================================
+Terminate a sequence in a switch statement (discussed above).
+To exit a loop.
+Used as a “civilized” form of goto.
+In the case of nested loops, the break statement terminates the innermost loop.
+
