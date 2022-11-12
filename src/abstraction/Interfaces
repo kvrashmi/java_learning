@@ -1,0 +1,38 @@
+Interfaces: 
+1. Provides 100% abstraction.
+2. It is a fully abstract class.
+3. Contains a group of abstract methods - that does not have a method definition.
+4. use "interface" keyword to create an interface.
+5. We cannot directly create objects for an interface.
+6. Objects can be created only for the classes that implement the interface.
+Ex: List<String> list = new ArrayList<String>();
+List => Interface , ArrayList => Is the class that implements the interface.
+7. Interfaces provide specifications that a class (which implements it) must follow.
+   To use an interface other classes must implement all the methods in it.
+8. "implements" keyword is used to implement an interface.
+9. Multiple interfaces can be implemented by a class.
+10.Similar to extending classes, an interface can extend another interface.
+Ex: 
+	Interface1 => extended by Interface2,Interface3  (1 : *)
+	Class1 => implement Interface1,Interface2 (1:*)
+11. Interfaces can be used to achieve multiple inheritance in Java: 
+An interface can extend more than one interface.
+
+12. All the methods inside an interface are implicitly "public".
+They are mostly abstract methods
+13. All the variables inside an interface are implicitly "public static final".
+
+14. Default methods: Java 8
+=====================
+Default methods are methods with implementation/definition inside a interface.
+To declare default methods inside interfaces, we use the "default" keyword.
+Ex:
+public default void getSides() {
+   // body of getSides()
+}
+
+15.Private methods: Java 9
+===================
+Similar to a class, we can access static methods of an interface using its references.
+We cannot create objects of an interface. Hence, private methods are used as helper 
+methods that provide support to other methods in interfaces.

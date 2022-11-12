@@ -1,0 +1,16 @@
+Encapsulation:
+==============
+1. Encapsulation refers to the bundling of fields and methods inside a single class.
+
+Data Hiding:
+===========
+2. Data Hiding/ Data Abstraction can be achieved through encapsulation: It prevents outer classes from accessing and 
+changing fields and methods of a class. This also helps to achieve data hiding.
+How to achieve data-hiding through getters-setters:
+===================================================
+3. Declare all the instance variables/properties/attributes of a class as final.
+4. Declare all the methods of the class as public.
+5. Try to access the private (instance variables/properties/attributes) through the public methods.
+Hint: Getters-Setters
+====
+The getter and setter methods provide read-only or write-only access to our class fields.

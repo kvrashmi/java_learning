@@ -1,11 +1,13 @@
 package polymorphism_overloading;
 
 /*
- * Two or more methods can have the same name inside the same class if they accept different arguments. This feature is known as method overloading.
+ * Two or more methods can have the same name inside the same class and they accept different arguments. 
+ * This feature is known as method overloading.
  * Method overloading is achieved by either:
    1. changing the number of arguments.
    2. or changing the data type of arguments.
- * It is not method overloading if we only change the return type of methods. There must be differences in the number of parameters.
+ * It is not method overloading if we only change the return type of methods. 
+ * There must be differences in the number of parameters.
  */
 
 public class MethodOverloading {
@@ -20,7 +22,7 @@ public class MethodOverloading {
         System.out.println("Arguments: " + a + " and " + b);
     }
     
-    // this method accepts int
+    // this method accepts float
     private static void display(float a){
         System.out.println("Got Float data.");
     }
