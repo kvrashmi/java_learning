@@ -1,0 +1,18 @@
+Convert an int to a String:
+int n=10;
+String a = String.format("%d",n);
+
+Convert a String to int:
+String s ="110";
+Integer i = Integer.parseInt(s);
+
+Integer => %d
+Double/Float => %.f
+%.3f => 3 digits after decimal
+%.2f => 2 digits after decimal
+
+
+Match the ones on the left to the right:
+1.CO()                      				1.CO("Java"); 2
+2.CO(String lang)           				2.CO("Python","SQL"); 3
+3.CO(String lang1,String lang2)				3.CO(); 1

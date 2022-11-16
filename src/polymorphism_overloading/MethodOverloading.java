@@ -22,9 +22,24 @@ public class MethodOverloading {
         System.out.println("Arguments: " + a + " and " + b);
     }
     
+  //this method accepts two parameters of int.
+    private static void display(String a, int b){
+        System.out.println("Arguments: " + a + " and " + b);
+    }
+    
+  //this method accepts two parameters of int.
+    private static void display(int a, String b){
+        System.out.println("Arguments: " + a + " and " + b);
+    }
+    
     // this method accepts float
     private static void display(float a){
         System.out.println("Got Float data.");
+    }
+    
+ // this method accepts float
+    private static void display(double a){
+        System.out.println("Got double data.");
     }
     
     // this method  accepts String object
@@ -48,9 +63,15 @@ public class MethodOverloading {
 		display(4);
 		display(1,2);
 		display(1.2f);
+		display(1.23456);
 		display("Hello");
+		display("Hello",2);
+		display(21,"Bye");
 		
 		MethodOverloading mo=new MethodOverloading();
+		String s = mo.formatNumber(123.7890);
+		System.out.println(s);
+		
 		System.out.println(mo.formatNumber(10));
 		System.out.println(mo.formatNumber(12345.8907));
 		System.out.println(mo.formatNumber("2303"));

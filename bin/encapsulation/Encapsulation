@@ -14,3 +14,11 @@ How to achieve data-hiding through getters-setters:
 Hint: Getters-Setters
 ====
 The getter and setter methods provide read-only or write-only access to our class fields.
+
+
+
+Top Level: Abstract - Non-abstract 
+		(no impl)   - implementation
+					  static - non static
+					  Class    Only objects can use
+				  "no this"    "this"

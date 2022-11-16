@@ -1,0 +1,20 @@
+Inheritance:
+1. Code Reusability: Child class can make use of parent class's fields and methods
+2. Run Time Polymorphism: Method Overriding (methodA is available in parent class - but the child class want it lil different -
+hence the child class decide to provide a new definition).
+3. Abstract Classes 
+
+		Polygon
+1.Rectangle 2.Square
+
+The keyword is always used to call parent class's methods and constructors.
+
+Multi-level:  Multiple :
+		      Interface         A 
+		      					B->A, C->A, D->A         		      				
+A
+|
+B
+|
+C
+
