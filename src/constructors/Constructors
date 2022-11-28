@@ -1,0 +1,8 @@
+1.Declaring constructor as final
+================================
+In inheritance whenever you extend a class,the child class inherits all the members of the superclass except the constructors.
+In other words, constructors cannot be inherited in Java, therefore, you cannot override constructors.
+So, writing final before constructors make no sense. Therefore, java does not allow final keyword before a constructor.
+If you try, make a constructor final a compile-time error will be generated saying “modifier final not allowed here”.
+Filename: FinalConstructor.java
+

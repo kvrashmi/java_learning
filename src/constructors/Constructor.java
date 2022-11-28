@@ -1,10 +1,12 @@
 package constructors;
 
 /*
- * A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. 
+ * A constructor in Java is a special method that is used to initialize objects. 
+ * The constructor is called when an object of a class is created. 
  * It can be used to set initial values for object attributes. 
- * A constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling the constructor,
- * memory for the object is allocated in the memory. 
+ * A constructor is a block of codes similar to the method.
+ * It is called when an instance of the class is created. 
+ * At the time of calling the constructor,memory for the object is allocated in the memory. 
  * It is a special type of method which is used to initialize the object. Every time an object is created using the new() keyword, at least one constructor is called.
  * It is not necessary to write a constructor for a class. 
  * It is because java compiler creates a default constructor if your class doesn’t have any.
@@ -23,9 +25,10 @@ package constructors;
 	Now is the correct time to discuss the types of the constructor, so primarily there are two types of constructors in java: 
 		1.No-argument constructor
         2.Parameterized Constructor
-		1. No-argument constructor: A constructor that has no parameter is known as the default constructor. If we don’t define a constructor in a class, then the 
-		compiler creates a default constructor(with no arguments) for the class. And if we write a constructor with arguments or no arguments then the compiler does 
-		not create a default constructor. 
+		1. No-argument constructor: A constructor that has no parameter is known as the default constructor. 
+		If we don’t define a constructor in a class, then the 
+		compiler creates a default constructor(with no arguments) for the class. 
+		And if we write a constructor with arguments or no arguments then the compiler does not create a default constructor. 
 	Note: Default constructor provides the default values to the object like 0, null, etc. depending on the type.
  */
 

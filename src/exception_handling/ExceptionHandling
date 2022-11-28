@@ -1,3 +1,0 @@
-Notes:
-
-1. In Java, we can use a try block without a catch block. However, we cannot use a catch block without a try block.

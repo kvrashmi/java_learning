@@ -23,11 +23,11 @@ public class ConstructorOverloading {
 	public static void main(String[] args) {
 		// call constructor with no parameter
 		ConstructorOverloading obj1 = new ConstructorOverloading();
-		obj1.getName(); 
+		obj1.getName(); //this - obj1.language
 	    
 		// call constructor with a single parameter
 		ConstructorOverloading obj2 = new ConstructorOverloading("Python");
-	    obj2.getName();
+	    obj2.getName(); // this -obj2.language
 	}
 
 }

@@ -13,7 +13,7 @@ public class Area_Program2 { //Data Hiding
 	}
 	*/
 							   //20
-	public void setLength(int length ) {  // this referes to the object
+	public void setLength(int length ) {  // this refers to the object
 	      this.length = length;
 	      //duncanHouse.length=length;
 	}
