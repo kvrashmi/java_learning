@@ -1,6 +1,5 @@
 package techfios_homework;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
