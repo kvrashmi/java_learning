@@ -30,15 +30,17 @@ public class ArrayList1 extends ArrayList<Integer> {
 	public static void main(String[] args) {
 		
 		// Creating list using the ArrayList class
-		ArrayList<Integer> l1 = new ArrayList<>();
+		ArrayList<Integer> l1 = new ArrayList<Integer>(); 
 		
 		//Ensure Capacity - every time when a new element is added the size of the arraylist increases to 1.5 times 
 		//larger than what it was before adding. By mentioning capacity, the arraylist would be capacity would be initialized
 		//to the number given. After 
 		l1.ensureCapacity(5);
-		
+		System.out.println("Size of l1  after ensure capacity:"+l1.size());
 		System.out.println("Empty List L1: " + l1);
-
+		l1.add(89);
+		System.out.println("Size of l1 after adding just one element :"+l1.size());
+		
 		//// Add elements to the list
 		l1.add(1);
 		l1.add(2);
@@ -50,10 +52,11 @@ public class ArrayList1 extends ArrayList<Integer> {
 		System.out.println("After adding elements: List L1: " + l1);
 		
 		//Get the size of l1 
-		System.out.println("Size of L1 is: "+ l1.size());
+		System.out.println("Size of L1 is: "+ l1.size()); 
 		
 		//Add an element at the end by using size:
-		l1.add(l1.size(),6);
+		//l1.add(index,element)
+		l1.add(l1.size(),6); //6,6
 		
 		//Print 
 	    System.out.println("After adding element: List L1: " + l1);
@@ -62,8 +65,9 @@ public class ArrayList1 extends ArrayList<Integer> {
 	    System.out.println("Adding element at size()+1 position :");
 	    
 	    try
-	    {
-		    l1.add(l1.size()+1,7);
+	    {                           //l1.size() => 7 
+	    						   // 0  1 2 3 4 5 6 7 8
+		    l1.add(l1.size()+1,7); //[89,1,2,3,4,5,6   
 	    }
 	    catch(IndexOutOfBoundsException ex)
 	    {
@@ -74,7 +78,6 @@ public class ArrayList1 extends ArrayList<Integer> {
 	    finally
 	    {
 	    	l1.add(l1.size(),7);
-
 			//Print 
 		    System.out.println("After adding element at correct position: List L1: " + l1);
 	    }

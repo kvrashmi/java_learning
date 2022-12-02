@@ -7,10 +7,15 @@ No direct implementation.
 Implemented through sub-interfaces like List,Set,Queue.
 
 1. List Interface: Ordered collection - that allows to add and remove elements like an array.
+==================
 2. Set Interface: Allows to store elements in different sets similar to the set in mathematics.
+=================
 No duplicates allowed.
 3. Queue Interface: When we want to store and retrieve elements in FIFO manner.
-4. Map Interface: allows elements to be stored in key-value pairs. Keys should be unique and can be used to access a particular element in a map.
+===================
+4. Map Interface: allows elements to be stored in key-value pairs. 
+=================
+Keys should be unique and can be used to access a particular element in a map.
 Each key has a single value associated with it.
 Common methods available in all sub-interfaces:
 add(),addAll(),size(),remove(),removeAll(),iterator(),clear().
@@ -18,8 +23,10 @@ add(),addAll(),size(),remove(),removeAll(),iterator(),clear().
 
 Collections Framework vs Collection Interface: 
 Collection Interface: Root interface of all collections framework.
-Collection Framework: The framework includes all the interfaces,sub-interfaces and classes to implement various data structures and algorithms.
+Collection Framework: The framework includes all the interfaces,sub-interfaces and classes to implement various data structures 
+and algorithms.
 
-SubInterfaces: Collection interface includes sub-interfaces like(list,set,queue,iterator and map) that are implemented by corresponding Java classes.
+SubInterfaces: Collection interface includes sub-interfaces like(list,set,queue,iterator and map) that are implemented by 
+corresponding Java classes.
 
 

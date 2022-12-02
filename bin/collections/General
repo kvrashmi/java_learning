@@ -1,0 +1,251 @@
+Collection: A group of objects represented as a single entity.
+
+Array: 1. Arrays were not growable at run time
+	   2. int[] a = new int[100]; -> homogenous data 
+	   3. Arrays not implemented on topm of any other datastructure.
+	   int[] a =new int[100];
+	   a[0]=1;
+	   a[1]=2;
+	   
+	   Iterator (root interface) (ListIterator)
+	   	|
+	   Collection (root interface) extends Iterator
+	   	|
+	   List extends Collection (Its own non-implemented methods + Collection + Iterator)
+	   	|
+	   ArrayList(Class) LinkedList Vector Stack => implements List
+	   (They are providing definitions for all of these interfaces).	
+	   
+ArrayList: 
+ Add Items
+ Access Items
+ Remove Items
+ Iterate
+ 
+package: import java.util.*;
+
+What are the ways we can create an arraylist:
+List<String> al1 = new ArrayList<String>();     //0
+ArrayList<String> al2=new ArrayList<String>();  //0
+
+Add Objects:
+al1.add("Python");
+["Python"]
+
+al1.add("Java");
+["Python","Java"]
+	0		1
+al1.add(1,"Javascript");        //true
+["Python","Javascript","Java"];
+	0		1			2
+
+al1.set(2,"C++");					// return the element
+["Python","Javascript","C++","Java"];
+
+al2.add("VB");
+al2.add("C");
+al2.add("Fortran");
+
+al1.addAll(al2);
+["Python","Javascript","C++","Java","VB","C","Fortran"];
+
+
+Accessing the objects:
+al1.get(4); ["VB"];
+al1.get(3); ["Java"]
+
+Syso(al1);
+
+int[] a = {1,2,3,4,5};
+Syso(a); // Obeject @Qa13245
+for(int i=0;i<a.length;i++)
+{
+	syso(a[i]);
+}
+
+
+Looping/ Iterating:
+Method1:
+//For all string element(l) in al1
+for(String l: al1)
+{
+	Syso(l + "is my fav language");
+}
+
+Python is my fav language
+Javascript is my fav language
+
+Iterator it1 = al1.iterator();
+while(it1.hasNext())
+{
+	syso(it1.next() + "is our fav lang");
+} //[Python,Java,Javasceipt,c++,vb] 
+     
+Remove:
+al1.remove(index);
+al1.remove(0); //Python will be removed ["Javascript","C++","Java","VB","C","Fortran"]
+al1.remove("Java"); ["Javascript","C++","VB","C","Fortran"]
+al1.clear(); 
+al1.removeAll();
+[]
+
+
+ArrayList: ordered collection - they preserve the insertion order.
+You can insert any number of items, then you can insert items in a same index
+[A,B,C,D,E] add(A),add(B)
+print - ABCDDE
+[A,B,Z,C,D,E] add(2,Z);
+print- ABZCDE
+....
+print - ABZCDE
+
+name:Ahmed, name:Duncan, name:Shalini
+
+name:Duncan, name:Shalini, 
+
+But when you try to print the arraylist -> it will print in the order the items are inserted.
+
+dynamically grows:
+ArrayList<String> al1 = new ArrayList<String>(); 
+a1 = [10]; if the array list is 75% of 10, then add 10 more.
+
+[A,B,C,D,E] 
+add(2,Z)
+A,B,Z,D,E
+
+
+
+
+
+
+l1 <- l2 <- l3[12,13,14]
+[1,2,3,9,7,8]
+l1.addAll(3,l3)
+
+
+
+[1,2,3,12,13,12,14,9,7,8,12]
+al1.indexOf(12) //3
+al1.lastIndexOf(12) //9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	   
+
+	   
+	   

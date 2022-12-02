@@ -1,0 +1,8 @@
+Binding: Connecting a method call to a method body is known as binding.
+=======
+Two Types of binding:
+=====================
+1. Static binding (early binding): 
+when type of the object is determined at compile time
+If there is any private, final or static method in a class, there is static binding.
+2. Dynamic binding (late binding): when type of the object is determined at run-time.

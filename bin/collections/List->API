@@ -1,0 +1,60 @@
+List: 																	  |
+		ArrayList					LinkedList							  |
+==========================================================================|
+Add	                                                                      |	
+==========================================================================|
+1		add(element)				add(element)                          |
+2		add(index,element)          add(index,element)                    |
+3		addAll(collection)			add(collection)                       |
+4		set(index,element)			lIterator=collection.listIterator();  |
+									lIterator.add(element);               |
+==========================================================================|									
+Access                                                                    |
+==========================================================================|	
+1		get(index)					get(index)                            |
+                                                                          |
+2									ListIterator();                       |
+									liter=collection.listIterator();      |
+									while(liter.hasNext())                |
+									{                                     |
+										liter.next();                     |
+									}                                     |
+									while(liter.hasPrevious())            |
+									{                                     |
+										liter.previous();                 |
+									}                                     |
+									                                      |
+3									Iterator();                           |
+									iter.collection.iterator();           |
+									while(iter.hasNext())                 |
+									{                                     |
+										iter.next();                      |
+									}                                     |
+==========================================================================|
+Remove                                                                    |
+==========================================================================|
+1		al.clear()					ll.clear()		                      |
+2		al.remove(index)		    ll.remove(index)                      |
+3		al.remove(element)                                                |
+4									ll.removeIf((Integer i)->i<4);        |
+5		al.removeAll()			    ll.removeAll()                        |
+6									ListIterator():                       |
+									liter=collection.listIterator();      |
+									liter.remove();                       |
+==========================================================================|
+Position                                                                  |
+==========================================================================|
+1  		 al.indexOf(element) 		ll.indexOf(element);                  |
+2        al.lastIndexOf(element)    ll.lastIndexOf(element);              |
+==========================================================================|                            
+Availability                                                              |
+==========================================================================|
+1 		al.contains()               ll.contains()
+2       al.containsAll(collection)
+3       al.isEmpty()
+===========================================================================
+Size
+===========================================================================
+1       al.size()                    
+2       al.ensureCapacity()
+===========================================================================|

@@ -1,0 +1,33 @@
+								Iterator (Root Interface) (methods with out definition)
+								         |
+								         | extends
+								         |
+								  Collection (Root Interface) (methods with out definition)
+								  		 |				
+								  		 | extends
+								  		 |
+								  	List (Interface) (methods with out definition)
+								  	     |
+								  	     | implements
+								  	     |
+								  	     ArrayList (Class), 
+								  	     Vector <- (extends) Stack (Class),
+								  	     LinkedList (Class)
+								  	     
+		Array: 
+		int[] s = new int[100]; //100 -> they are not growable at run-time, their capacity is fixed.
+		                              -> homogenous data 
+		                                 String[] s1 = new String[20];
+		                                 Employee[] e1 = new Employee[100];
+		                                    e1[0]= new Employee();
+		                                    e1[1]= new Employee();
+		                                    e1[2]= new Students();
+		                                    
+		                                 Object[] ob = new Object[1000];
+		                                  ob[0]=1;
+		                                  ob[1]="Man";
+		                               -> no underlying data structure for array implementation.
+		                               (There are no common methods)
+		                               
+		                      
+		

@@ -1,0 +1,6 @@
+String path="dict.txt";
+Scanner sc = new Scanner(path);
+while(sc.hasNext())
+{
+	String s= sc.next(); // do the processing
+}

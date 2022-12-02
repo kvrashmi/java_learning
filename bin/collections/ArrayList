@@ -10,8 +10,24 @@ Automatically adjust size when we add or remove elements from them.
 Hence, arraylists are known as dynamic arrays.
 
 How to create an arraylist:
+
 import java.util.ArrayList;
-ArrayList<String> al1 = new ArrayList<>();
-ArrayList<Integer> al2 = new ArrayList<>();
-List<Double> al3 = new ArrayList<>();
-List<ClassType> al4 = new ArrayList<>();
+
+ArrayList<String> al1 = new ArrayList<String>();
+ArrayList<Integer> al2 = new ArrayList<Integer>();
+
+List<Double> al3 = new ArrayList<Double>(); 
+List<ClassType> al4 = new ArrayList<ClassType>();
+
+
+ArrayList class implements all the methods in the List interface.
+Despite that it has its own set of methods.
+
+
+
+
+
+
+
+
+
