@@ -1,0 +1,166 @@
+AutoBoxing: Converting a primitive value into an object of the corresponding wrapper class
+Ex: int => Integer
+
+UnBoxing: Converting an object of a wrapper type to corresponding primitive type.
+Ex: Integer => int
+
+Compiler uses valueOf() method to convert primitive to Object (int -> Integer)
+and uses xxxValue() i,e, intValue(), doubleValue() etc to get primitive value from Object (Integer -> int).
+
+Primitive Type	Wrapper Class
+===========|==================
+boolean	   |	Boolean
+byte	   |	Byte
+char	   |	Character
+float 	   |	Float
+int 	   |	Integer
+long	   |	Long
+short 	   |    Short
+double	   | 	Double
+
+What Are Wrapper Classes?
+=========================
+A wrapper class wraps (encloses) around a data type and gives it an object appearance. 
+Wherever, the data type is required as an object, this object can be used.
+Wrapper classes also include methods to unwrap the object and give back the data type. 
+
+Where are Wrapper Classes available? 
+=====================================
+They are available in java.lang package.
+
+Wrapper class hierarchy:
+=======================
+								Object
+								   |								
+	-------------------------------------------------------------
+	|											|				|
+	Number									    Boolean         Character
+	|
+	|
+	-----Byte
+    |
+    |
+    -----Short
+    |
+    |
+    -----Integer
+    |
+    |
+    -----Long
+    |
+    |
+    -----Float
+    |
+    |
+    -----Double
+    
+Advantages of wrapper classes:
+==============================
+1. If you have been using Collections like Stack or Vector before Java 1.5, then you are familiar with the issues like you can not directly
+put primitives into Collections, instead, you first need to convert them into Object and then only you can put them into Collections. 
+Wrapper classes like Integer, Double and Boolean helps for converting primitive to Object.
+2.To convert Strings into data types (known as parsing operations), here methods of type parseXXX() are used i.e. Integer.parseInt() and 
+Float.parseFloat().
+
+When Do Autoboxing And Unboxing Occur:
+======================================
+Autoboxing and unboxing can happen anywhere where an object is expected and primitive type is available and vice versa. 
+
+1. Adding primitive types into Collection like ArrayList in Java
+2. Creating an instance of parameterized classes e.g. ThreadLocal which expect Type
+3. In method invocation, where an object argument is expected,  if you pass primitive, Java automatically converts primitive into 
+equal value Wrapper Object.
+4. while assigning primitive types to object type references.
+
+Why == Operator Works For Integer Value Until 127 Number?
+=========================================================
+class CodePumpkinDemo 
+{
+    public static void main(String[] args)
+    {
+        Integer n1 = new Integer(100);
+        Integer n2 = new Integer(100);
+         
+        Integer n3 = 127;
+        Integer n4 = 127;
+         
+        Integer n5 = 128;
+        Integer n6 = 128;
+         
+        System.out.println(n1==n2); //false - two different objects
+        System.out.println(n3==n4); // true (IntegerCache cached value range)
+        System.out.println(n5==n6); // false (Out of IntegerCache cached value range-hence two different objects will be created as n1 and n2)
+    }
+     
+}
+Reason:
+======
+Integer class caches value of integer from -128 to 127 using inner class IntegerCache. 256 Integer objects are created in the range of 
+-128 to 127 which are all stored in an Integer array. 
+
+Compiler internally uses valueOf()  method for Autoboxing and whenever we try to assign Integer object with value from -128 to 127, 
+it uses the cached object from IntegerCache array. So == operator will always return true in this range i.e. n3==n4 -> true
+
+But when we assign any value which is out of this range, compiler creates new Integer()  object and hence == will  return false 
+out of this range i.e.  n5==n6 -> false.
+
+Also caching happens only if you use Integer.valueOf(int), not if you use new Integer(int). Here, n1 and n2  are created 
+using Integer constructor Integer(int), so n1 == n2 -> false.
+
+Why Integer Wrapper Class Caches This Range ?
+=============================================
+To improve performance of Autoboxing and unboxing as compiler calls valueOf() method internally.
+
+This short range are generally used for performance of public static valueOf(int n)  as this method is likely to yield 
+significantly better space and time performance by caching frequently requested values.
+
+Can We Increase The IntegerCache Array Range?
+=============================================
+Upto Java 5 and even in some older version of Java 6, this range was hardcoded from -128 to 127.
+
+From Java 7 (and some of the newer versions of Java 6), the implementation of the IntegerCache class has changed, 
+and the upper bound is no longer hardcoded, but it is configurable.
+
+The cache can be initialized on first usage. 
+The size of the cache may be controlled by the -XX:AutoBoxCacheMax=<size> option and it is being set in property 
+java.lang.Integer.IntegerCache.high during VM initialization.
+
+For Example,
+
+You can set the -XX:AutoBoxCacheMax=1000, and it will catch integer upto 1000 which means following code will results true
+1
+2
+3
+4
+Integer integer1 = 1000;
+Integer integer2 = 1000;
+ 
+System.out.println(integer1 == integer2);   // true
+Similar to IntegerCache, many changes have also been done in JVM String Pool implementations in Java 7 and Java 8.
+
+What Is The MaxSize Of -XX:AutoBoxCacheMax?
+===========================================
+Max cache size can’t be more than -Xmx (which is JVM heap size) . 
+Heap size is defined by vm argument -Xmxm .
+As soon as JVM is initialized, it allocates the memory for caching purpose.
+You can’t allocate whole (-Xmx in byte)/4 (4byte is size of  int) for AutoBoxCache, because other objects are also required to be 
+loaded and you might end up with java.lang.OutOfMemoryError: Java heap space.
+
+Do All The Wrapper Classes Support Caching?
+===========================================
+Yes, all of them do support to increase performance of Autoboxing and Auto-unboxing.
+But unlike Integer, they have fixed caching size upto 127 only. You can not enhance the range.
+
+Why Are Java Wrapper Classes Immutable?
+=======================================
+Here are some reasons for making wrapper classes immutable:
+Since the state of the immutable objects can not be changed once they are created they are automatically synchronized/thread-safe 
+and the overhead caused due to use of synchronisation is avoided.
+The references to the immutable objects can be easily shared or cached without having to copy or clone them as their state can not be
+changed ever after construction.
+
+
+
+
+
+

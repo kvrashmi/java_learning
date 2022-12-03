@@ -1,0 +1,66 @@
+1.Iterating Map: Using Entry Set
+Ex:
+// Creating a HashMap
+HashMap<String, Integer> numbers = new HashMap<>();
+numbers.put("One", 1);
+numbers.put("Two", 2);
+numbers.put("Three", 3);
+System.out.println("HashMap: " + numbers);
+
+// access each entry of the hashmap
+System.out.print("Entries: ");
+
+// entrySet() returns a set view of all entries
+// for-each loop access each entry from the view
+for(Map.Entry<String, Integer> entry: numbers.entrySet()) 
+{
+    System.out.print(entry);
+    System.out.print(", ");
+}
+
+2.Iterating Map: Using Key Set
+Ex:
+    // Creating a HashMap
+    HashMap<String, Integer> numbers = new HashMap<>();
+    numbers.put("One", 1);
+    numbers.put("Two", 2);
+    numbers.put("Three", 3);
+    System.out.println("HashMap: " + numbers);
+
+    // access all keys  of the HashMap
+    System.out.print("Keys: ");
+
+    // keySet() returns a set view of all keys
+    // for-each loop access each key from the view
+    for(String key: numbers.keySet()) {
+
+      // print each key
+      System.out.print(key + ", ");
+    }
+
+O/P:
+HashMap: {Pant=150, Bag=300, Shoes=200}
+Keys: [Pant, Bag, Shoes]
+
+3.Iterating Map: Using values
+Ex:
+// Creating a HashMap
+HashMap<String, Integer> numbers = new HashMap<>();
+numbers.put("One", 1);
+numbers.put("Two", 2);
+numbers.put("Three", 3);
+System.out.println("HashMap: " + numbers);
+
+// access all values  of the HashMap
+System.out.print("Values: ");
+
+// values() returns a view of all values
+// for-each loop access each value from the view
+for(int value: numbers.values()) 
+{
+  // print each value
+  System.out.print(value + ", ");
+}
+O/p:
+HashMap: {One=1, Two=2, Three=3}
+Values: 1, 2, 3, 

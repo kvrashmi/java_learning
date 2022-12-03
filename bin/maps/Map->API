@@ -1,0 +1,212 @@
+1. put(K, V) - Inserts the association of a key K and a value V into the map. 
+If the key is already present, the new value replaces the old value.
+Ex:
+	Map<String,String> m = new HashMap<String,String>();
+	m.put("USA","Dollars");
+	m.put("UK","Euro");
+
+2. putAll() - Inserts all the entries from the specified map to this map.
+    Map<String,String> m1 = new HashMap<String,String>();
+	m1.put("India","Delhi");
+	m1.put("Nepal","Katmandu");
+	m.putAll(m1);
+	
+3. putIfAbsent(K, V) - Inserts the association if the key K is not already associated with the value V.
+Ex:
+HashMap<Integer, String> languages = new HashMap<>();
+
+    // add mappings to HashMap
+    languages.put(1, "Python");
+    languages.put(2, "C");
+    languages.put(3, "Java");
+    System.out.println("Languages: " + languages);
+
+    // key already not present in HashMap
+    languages.putIfAbsent(4, "JavaScript");
+
+    // key already present in HashMap
+    languages.putIfAbsent(2, "Swift");
+    System.out.println("Updated Languages: " + languages);
+    
+4. get(K) - Returns the value associated with the specified key K. If the key is not found, it returns null.
+Ex:
+HashMap<Integer, String> languages = new HashMap<>();
+    languages.put(1, "Java");
+    languages.put(2, "Python");
+    languages.put(3, "JavaScript");
+    System.out.println("HashMap: " + languages);
+
+    // get() method to get value
+    String value = languages.get(1);
+    System.out.println("Value at index 1: " + value);
+    
+5. getOrDefault(K, defaultValue) - Returns the value associated with the specified key K. 
+Ex:
+		// create an HashMap
+        HashMap<Integer, String> numbers = new HashMap<>();
+
+        // insert entries to the HashMap
+        numbers.put(1, "Java");
+        numbers.put(2, "Python");
+        numbers.put(3, "JavaScript");
+        System.out.println("HashMap: " + numbers);
+
+        // mapping for the key is present in HashMap
+        String value1 = numbers.getOrDefault(1, "Not Found");
+        System.out.println("Value for key 1:  " + value1);
+
+        // mapping for the key is not present in HashMap
+        String value2 = numbers.getOrDefault(4, "Not Found");
+        System.out.println("Value for key 4: " + value2);
+	If the key is not found, it returns the defaultValue.
+	
+6.containsKey(K) - Checks if the specified key K is present in the map or not.
+Ex: 
+	// create a HashMap
+    HashMap<String, String> details = new HashMap<>();
+
+    // add mappings to HashMap
+    details.put("Name", "Programiz");
+    details.put("Domain", "programiz.com");
+    details.put("Location", "Nepal");
+    System.out.println("Programiz Details: \n" + details);
+
+    // check if key Domain is present
+    if(details.containsKey("Domain")) {
+      System.out.println("Domain name is present in the Hashmap.");
+    }
+
+7.containsValue(V) - Checks if the specified value V is present in the map or not.
+Ex:
+	 // create a HashMap
+    HashMap<Integer, String> languages = new HashMap<>();
+
+    // add mappings to HashMap
+    languages.put(1, "Python");
+    languages.put(2, "Java");
+    languages.put(3, "JS");
+    System.out.println("HashMap" + languages);
+
+    // check if value Java is present
+    if(languages.containsValue("Java")) {
+      System.out.println("Java is present on the list.");
+    }
+    
+8.replace(K, V) - Replace the value of the key K with the new specified value V.
+Ex:
+// create an HashMap
+    HashMap<Integer, String> languages = new HashMap<>();
+
+    // add entries to HashMap
+    languages.put(1, "Python");
+    languages.put(2, "English");
+    languages.put(3, "JavaScript");
+    System.out.println("HashMap: " + languages);
+
+    // replace mapping for key 2
+    String value = languages.replace(2, "Java");
+
+    System.out.println("Replaced Value: " + value);
+    System.out.println("Updated HashMap: " + languages);
+	
+9.replace(K, oldValue, newValue) - Replaces the value of the key K with the new value newValue only if the key K is associated with the
+value oldValue.
+Ex:
+ 	// create an HashMap
+    HashMap<String, String> countries = new HashMap<>();
+     // insert items to the HashMap
+    countries.put("Washington", "America");
+    countries.put("Ottawa", "Canada");
+    countries.put("Canberra", "Australia");
+    System.out.println("Countries:\n" + countries);
+    // replace mapping {Washington = America}
+    countries.replace("Washington", "America", "USA");  // return true
+    countries.replace("Canberra", "New Zealand", "Victoria");  // return false
+    System.out.println("Countries after replace():\n" + countries);
+ 
+10. replaceAll(): replaceAll() method replaces all mappings of the hashmap with the result from the specified function.
+Ex:
+	// create an HashMap
+    HashMap<Integer, String> languages = new HashMap<>();
+    // add entries to the HashMap
+    languages.put(1, "java");
+    languages.put(2, "javascript");
+    languages.put(3, "python");
+    System.out.println("HashMap: " + languages);
+    // Change all value to uppercase
+    languages.replaceAll((key, value) -> value.toUpperCase());
+    System.out.println("Updated HashMap: " + languages);
+   
+10.remove(K) - Removes the entry from the map represented by the key K.
+Ex:
+	// create a HashMap
+    HashMap<Integer, String> languages = new HashMap<>();
+    // add mappings to HashMap
+    languages.put(1, "Python");
+    languages.put(2, "C");
+    languages.put(3, "Java");
+    System.out.println("Languages: " + languages);
+    // remove the mapping with key 2
+    languages.remove(2);  // return C
+    System.out.println("Updated Languages: " + languages);
+    
+11.remove(K, V) - Removes the entry from the map that has key K associated with value V.
+Ex:
+	// create an HashMap
+    HashMap<String, String> countries = new HashMap<>();
+    // insert items to the HashMap
+    countries.put("Washington", "America");
+    countries.put("Ottawa", "Canada");
+    countries.put("Kathmandu", "Nepal");
+    System.out.println("Countries: " + countries);
+    // remove mapping {Ottawa=Canada}
+    countries.remove("Ottawa", "Canada");  // return true
+    // remove mapping {Washington=USA}
+    countries.remove("Washington", "USA");  // return false
+    System.out.println("Countries after remove(): " + countries);
+    
+12. keySet() - Returns a set of all the keys present in a map.
+Ex:
+ // create an HashMap
+    HashMap<String, Integer> prices = new HashMap<>();
+
+    // insert entries to the HashMap
+    prices.put("Shoes", 200);
+    prices.put("Bag", 300);
+    prices.put("Pant", 150);
+    System.out.println("HashMap: " + prices);
+
+    // return set view of all keys
+    System.out.println("Keys: " + prices.keySet());
+    //
+    
+13. values() - Returns a set of all the values present in a map.
+Ex:
+// create an HashMap
+    HashMap<String, Integer> prices = new HashMap<>();
+
+    // insert entries to the HashMap
+    prices.put("Shoes", 200);
+    prices.put("Bag", 300);
+    prices.put("Pant", 150);
+    System.out.println("HashMap: " + prices);
+
+    // return view of all values
+    System.out.println("Values: " + prices.values());
+O/p:
+HashMap: {Pant=150, Bag=300, Shoes=200}
+Values: [150, 300, 200]
+	
+14. entrySet() - Returns a set of all the key/value mapping present in a map.
+Ex:
+	// create an HashMap
+    HashMap<String, Integer> prices = new HashMap<>();
+    // insert entries to the HashMap
+    prices.put("Shoes", 200);
+    prices.put("Bag", 300);
+    prices.put("Pant", 150);
+    System.out.println("HashMap: " + prices);
+    // return set view of mappings
+    System.out.println("Set View: " + prices.entrySet());
+
+
