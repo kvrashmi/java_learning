@@ -4,7 +4,7 @@ Ex:
 	Map<String,String> m = new HashMap<String,String>();
 	m.put("USA","Dollars");
 	m.put("UK","Euro");
-
+	
 2. putAll() - Inserts all the entries from the specified map to this map.
     Map<String,String> m1 = new HashMap<String,String>();
 	m1.put("India","Delhi");

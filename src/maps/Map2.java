@@ -7,7 +7,7 @@ public class Map2 {
 	public static void main(String[] args) {
 		//Maps:
 		//Unordered collection - where insertion order is not preserved
-		// It stores objects in key value pair
+		//It stores objects in key value pair
 		//Rules for a key:
 		//Keys in a same map cannot be duplicated - they must be unique
 		//Keys cannot have a null value
@@ -53,7 +53,7 @@ public class Map2 {
 		m1.replace("Cuba", 10, 100);
 		System.out.println("M1:"+m1);
 		
-		m1.replaceAll( (key, value) -> value*100 );
+		m1.replaceAll((key, value) -> value*100);
 		System.out.println("M1:"+m1);
 		
 		m1.remove("USA");
@@ -64,7 +64,7 @@ public class Map2 {
 		
 		m2.clear();
 		System.out.println("M2:"+m2);
-			
+		
 		//Iterating map using its keys 
 		for(String s: m1.keySet()) 
 		{
@@ -85,7 +85,8 @@ public class Map2 {
 		{
 		    System.out.println(e.getKey() + " " + e.getValue());
 		}
-
+		
+		
 		Map<String,String> m11 = new HashMap<String,String>();
 		m11.put("Test","SOAP");
 		m11.put("Test1", "XML");
@@ -101,17 +102,18 @@ public class Map2 {
 		//List<String> listOfStrings = new ArrayList<String>();
 		List<Map<String,String>> listOfMaps = new ArrayList<Map<String,String>>();
 		
-		listOfMaps.add(m11);
+		listOfMaps.add(m11); 
 		listOfMaps.add(m12);
 		listOfMaps.add(m13);
 		
 		
-		
+		/*
 		List<String> listOfStrings = new ArrayList<String>();
 		for(String x:listOfStrings)
 		{
 			
 		}
+		*/
 		
 		for(Map<String,String> eachMap: listOfMaps) //Outer for loop is going to iterate over the list
 		{
@@ -120,7 +122,7 @@ public class Map2 {
 				System.out.println("Key: "+entry.getKey()+ " Value:"+entry.getValue());
 			}
 		}
-
+	
 /*
 	listOfMaps:
     0:[Key: Test1 Value:XML]

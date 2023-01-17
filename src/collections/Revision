@@ -1,0 +1,193 @@
+Collection: A single entity that is used to represent a group of entities (objects).
+Container/bucket: specify the datatype of the items that it want to contain.
+
+Datatypes of items that a container can contain: String, Integer, Float, Double etc.
+It can contain all the non-primitive types.
+Class Employee{}
+Employee e1 = new Employee();
+Employee e2 = new Employee();
+Employee e3 = new Employee();
+Employee e4 = new Employee();
+
+Collection<Employee> empCollection = new Collection<Employee>();
+empCollection.add(e1);
+empCollection.add(e2);
+empCollection.add(e3);
+
+
+Collection<String> empCollection = new Collection<String>();
+empCollection.add("Saranya");
+empCollection.add("Selvi");
+empCollection.add("Rashmi");
+
+Collection(S) Framework: provides a set of class and methods or apis or interface that helps to represent a group of objects as a single collection.
+
+								Iterator (Root Interface)
+									| extends
+								Collection (Root Interface) (Collection interfaces undefined methods + Iterator undefined methods).
+								extends	|
+					|--------------|--------------|			  
+					List(I)       Set(I)         Queue(I)
+	implements				|		| implements     |Deque(I)
+		---------------------     HashSet            |   implements
+		|			        |                        |
+      ArrayList       LinkedList---------------------|
+
+==============================================================================
+ArrayList: is collection that is used for resizable arrays.
+Array drawbacks: size: fixed - runtime - not growable
+                 type: homegenous type - at a particular time only one type of data
+                 Ex: int[] a = new int[10];
+                 String[] s = new String[10]; 
+                 implemented without an underlying datastructure
+ArrayList: 1. is a collection that is used for resizable arrays (it can growable at run-time).
+           2. it is an ordered collection - the insertion order of elements is
+preserved.
+		   3. it allows null values and it also allows duplicates.
+
+When to go for an arrylist: only if you want to retrieve items more than inserting or deleting items, then go for arraylist.
+ Al1: ["Cat","Dog","Mouse","Lion"];
+ 		0     1     2       3
+ Al1.add(1,"Tiger");
+ ["Cat","Tiger","Dog","Mouse","Lion"]
+
+ArrayList: Add/Access/Removing/Iterating
+Add: al1.add(object), al1.add(index,object), al1.addAll(Collection)
+
+Where does ArrayList reside in Java: import java.util.*;
+
+How you will create arraylist objects?
+List<String> al1 = new ArrayList<String>(); 
+ArrayList<String> al2 ArrayList<String>();
+
+Add:
+al1.add("Cat");
+al1.add("Dog");
+a1.add("Parrot");
+al1.add("Mouse");
+
+Add: 
+a1.add(4,"Rabbit");
+
+String a[] = new String[] { "A", "B", "C", "D" };
+ // Getting the list view of Array
+List<String> a2 = Arrays.asList(a);
+
+a1.add(a2);
+a1:[Cat,Dog,Parrot,mouse]
+a1:[Cat,Dog,parrot,mouse,a,b,c,d]
+
+a1.add(index,collection)
+a1.add(2,a2);
+[Cat,Dog,A,b,C,D,Parrot,Mouse]
+
+a1.addAll(a2);
+a1:[Cat,Dog,parrot,mouse,a,b,c,"Parrot",d]
+
+Access: 
+a1.get(2); "Parrot"
+a1.indexOf("Parrot"); //2 a1.get(a1.indexOf("Parrot"));
+a1.lastIndexOf("Parrot");//7 (as per 85th line)
+
+Check the availabilty of arraylist and its elements:
+a1.isEmpty(); //false
+a1.contains("Mouse"); //true
+a1.size() -> 9
+
+Remove:
+Remove all the elements
+a1.clear();//efficient and fast
+a1.removeAll(); 
+a1.remove("Parrot"); //first occurance of parrot
+a1.remove(5); //removes the returns the element removed.
+
+Iteration:
+1. for - naive approach
+2. while 
+3. enhanced for loop  ****
+4. using Iterator
+5. using ListIterator
+6. using forEach()
+7. using streams().forEach()
+
+Using normal for loop:
+for(int i=0;i<al1.size();i++)
+{
+	Syso(al1.get(i));
+}
+
+Using Iterator:
+Iterator<String> it1 = al1.iterator();
+while(it1.hasNext())
+{
+	syso(it1.next());
+}
+
+Using ListIterator:
+ListIterator<String> lit1 = al1.listIterator();
+while(lit1.hasNext())
+{
+	syso(lit1.next());
+}
+
+Using enhanced for loop:
+for(String s:al1)
+{
+	syso(s);
+}
+
+Integer[] a = {1,2,3,4,5,6,7}
+List<Integer> il1 = Arrays.asList(a);
+for(Integer i:il1)
+{
+	syso(i);
+}
+
+Convert an arraylist into an array:
+String[] a = al1.toArray();
+Convert array into an arraylist:
+Integer[] a = {1,2,3,4,5,6,7};
+List<Integer> il1 = Arrays.asList(a);
+=============================================================================
+LinkedList: When you have more insertions/deletions in your application.
+Methods: (Iterator->Collection->List + Iterator->Collection->Queue->Dequeue)
+ArrayList:
+|A|
+|B|
+|C|
+|D|
+|E|
+LinkedList:
+		.->|prev|data|next|-><-|prev|data|next|->null
+
+Where does it reside: import java.util.*;
+List<String> ll1 = new LinkedList<String>(); size: 10 (75%) 20 (75%) 30
+LinkedList<String> ll2 = new LinkedList<String>();
+ll1.add("Cat");
+ll1.add("Dog");
+ll1.add("Mouse");
+.->|prev|cat|next|->|prev|dog|next|->|prev|mouse|next|->null
+@Qa12     0   @Qa13   @Qa12  1 @Qa14    @Qa13   2   @Qa15
+
+ll1.add(1,"Rabbit")
+|prev|rabbit|next|
+cat|next| -> X
+cat|next|  -> |prev|rabbit|next|
+dog|prev| -> X
+rabbit|next|->|prev|dog|next
+|prev|cat|next|->|prev|rabbit|next|->|prev|dog|next|->null
+=============================================================================
+Set: unordered collection, follows the same mathematical concept called set,
+no duplicates are allowed, but one null value is allows, union (combine 2 set), difference (elements not present in either one of the set), intersection(common elements in both the set).
+=============================================================================
+Map: Iterator->Collection->Map
+unordered collection, key-value pair they are stored, 
+key => hashcode generate => stored in ascending order,
+Key should be unique (no duplicates allowed),keys cannot contain null values,
+but values can be duplicated.
+Add/Retrieve/Remove/Iterate:
+package: import java.util.*;
+How to create objects:
+	//key  //value
+Map<String,Integer> m1 = new HashMap<String,Integer>();
+HashMap<String,Integer> m2 = new HashMap<String,Integer)();
